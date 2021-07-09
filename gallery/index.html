@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>aruCraftR</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets/icon/favicon.ico">
+
+  <!-- CSS  -->
+  <link href="https://cdn.staticfile.org/material-design-icons/3.0.2/iconfont/material-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet"
+    media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/css/common.min.css" type="text/css"
+    rel="stylesheet" media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/css/gallery.min.css" type="text/css"
+    rel="stylesheet" media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/waifu.min.css"
+    rel="stylesheet" type="text/css">
+</head>
+
+<body style="overflow: hidden; background-color: #fff">
+  <div id="load_page">
+    <h2 style="color:dimgrey; line-height: 100vh">加载中<br>此页面有较多图片资源<br>[页面正在开发]</h3>
+  </div>
+  <div id="background"></div>
+  <!--Live2D-->
+  <div class="waifu reveal" data-reveal-distance="300px" data-reveal-delay="500" data-reveal-duration="1200">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+      <span class="fui-home" style="line-height: 20px;"></span>
+      <span class="fui-chat" style="line-height: 20px;"></span>
+      <span class="fui-eye" style="line-height: 20px;"></span>
+      <span class="fui-user" style="line-height: 20px;"></span>
+      <span class="fui-photo" style="line-height: 20px;"></span>
+      <span class="fui-info-circle" style="line-height: 20px;"></span>
+      <span class="fui-cross" style="line-height: 20px;"></span>
+    </div>
+  </div>
+  <!--导航栏-->
+  <div class="navbar-fixed">
+    <nav style="background-color: #ffffff00;" role="navigation" class="reveal" data-reveal-distance="-110px"
+      data-reveal-duration="1000">
+      <div class="navbar-bg" style="opacity: 0;"></div>
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="../" class="brand-logo">aruCraftR</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../announcement" class="teal-text text-lighten-2">Announcement
+            </a></li>
+          <li><a href="../players" class="teal-text text-lighten-2">Players </a></li>
+          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="carousel">
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a73c08322e6675c2667f8.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/602f21cee7e43a13c6426a5c.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a73d08322e6675c2674bd.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a73ef8322e6675c269111.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a73ef8322e6675c269119.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a73ef8322e6675c269125.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a73ef8322e6675c26912f.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a73ef8322e6675c26910a.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a88c88322e6675c39e68b.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a743b8322e6675c26df8e.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a743b8322e6675c26df94.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a734b8322e6675c2601fe.png"></a>
+    <a class="carousel-item" href="#"><img src="https://img.imgdb.cn/item/606a74508322e6675c26ef51.png"></a>
+  </div>
+  <!--  Scripts-->
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.staticfile.org/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="https://cdn.staticfile.org/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/general.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/get-minecraft-server.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/common.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/init.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/gallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/ie-detect.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/waifu-tips.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/live2d.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/live2D-config.min.js"></script>
+
+
+</body>
+
+</html>

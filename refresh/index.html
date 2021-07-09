@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>aruCraftR</title>
+  <style>
+    a {
+      display: block;
+      line-height: 50px;
+      font-size: 30px;
+      width: auto
+    }
+  </style>
+</head>
+
+<body style="visibility: hidden;">
+  <h2 style="color:red">如果你不知道什么是刷新CDN缓存，请退出此页</h2>
+  <h3>下方所有文件名省略[.min]</h3>
+  <a href="#" onclick="add_refresh_url('js/404.min.js')">404.js</a>
+  <a href="#" onclick="add_refresh_url('js/common.min.js')">common.js</a>
+  <a href="#" onclick="add_refresh_url('js/gallery.min.js')">gallery.js</a>
+  <a href="#" onclick="add_refresh_url('js/general.min.js')">general.js</a>
+  <a href="#" onclick="add_refresh_url('js/ie-detect.min.js')">ie-detect.js</a>
+  <a href="#" onclick="add_refresh_url('js/live2D-config.min.js')">live2D-config.js</a>
+  <a href="#" onclick="add_refresh_url('css/404.min.css')">404.css</a>
+  <a href="#" onclick="add_refresh_url('css/announcement.min.css')">announcement.css</a>
+  <a href="#" onclick="add_refresh_url('css/common.min.css')">common.css</a>
+  <a href="#" onclick="add_refresh_url('css/gallery.min.css')">gallery.css</a>
+  <a href="#" onclick="add_refresh_url('css/players.min.css')">players.css</a>
+  <a href="#" onclick="user_add_refresh_url()">添加不在此列表的文件路径(例：js/common.min.js)</a>
+  <p>计划列表：</p>
+  <a href="#" onclick="start_refresh_url()">开始刷新</a>
+  <h1>等待开始</h1>
+  <span></span>
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../js/refresh.min.js"></script>
+</body>
+
+</html>

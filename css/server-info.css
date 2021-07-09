@@ -1,0 +1,21 @@
+.parallax-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.collapsible {
+  color: #444;
+}
+
+.collapsible-body {
+  background-color: #ffffffd0;
+}
+
+.collapsible {
+  position: absolute;
+  width: 50vw;
+  top: 150px;
+  left: 25vw;
+  border: 0;
+  box-shadow: none;
+}

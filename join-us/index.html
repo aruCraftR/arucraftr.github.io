@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>aruCraftR</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets/icon/favicon.ico">
+
+  <!-- CSS  -->
+  <link href="https://cdn.staticfile.org/material-design-icons/3.0.2/iconfont/material-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet"
+    media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/css/common.min.css" type="text/css"
+    rel="stylesheet" media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/css/join-us.min.css" type="text/css"
+    rel="stylesheet" media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/waifu.min.css"
+    rel="stylesheet" type="text/css">
+</head>
+
+<body style="overflow: hidden; background-color: #fff">
+  <div id="load_page">
+    <h2 style="color:dimgrey; line-height: 100vh">加载中</h3>
+  </div>
+  <div id="background"></div>
+  <!--Live2D-->
+  <div class="waifu reveal" data-reveal-distance="300px" data-reveal-delay="500" data-reveal-duration="1200">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+      <span class="fui-home" style="line-height: 20px;"></span>
+      <span class="fui-chat" style="line-height: 20px;"></span>
+      <span class="fui-eye" style="line-height: 20px;"></span>
+      <span class="fui-user" style="line-height: 20px;"></span>
+      <span class="fui-photo" style="line-height: 20px;"></span>
+      <span class="fui-info-circle" style="line-height: 20px;"></span>
+      <span class="fui-cross" style="line-height: 20px;"></span>
+    </div>
+  </div>
+  <!--导航栏-->
+  <div class="navbar-fixed">
+    <nav style="background-color: #ffffff00;" role="navigation" class="reveal" data-reveal-distance="-110px"
+      data-reveal-duration="1000">
+      <div class="navbar-bg" style="opacity: 0;"></div>
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="../" class="brand-logo">aruCraftR</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../announcement" class="teal-text text-lighten-2">Announcement
+            </a></li>
+          <li><a href="../gallery" class="teal-text text-lighten-2">Gallery </a></li>
+          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+  <div id="index-banner" class="parallax-container reveal" data-reveal-distance="100px" data-reveal-duration="400">
+    <h5 id="warning">这里将会解释本服务器各个特殊的地方
+      <br>加入我们前请务必先了解此页面上的内容
+    </h5>
+    <hr>
+    <h4>首先是常见问题</h4>
+    <br>
+    <h5><a name="q1"></a>你们是商业服吗，如果是公益服，服务器是否会长期在线？</h5>
+    <hr class="sub-hr" align="left">
+    <h5 class="answer">我们不是商业服，只要没有不可抗力因素，服务器会长期在线。</h5>
+    <div class="separate"></div>
+    <h5><a name="q2"></a>你们的官网和网页地图访问那么慢，是不是在服务器里面也有几千的延迟？</h5>
+    <hr class="sub-hr" align="left">
+    <h5 class="answer">我们没有很多资金去购买云服务器搭建网页(官网使用Github Pages托管，网页地图由Track07_cda提供转发服务器)。<br>服务器内延迟与运营商和地区相关，详细的解释在下文可找到。
+    </h5>
+    <div class="separate"></div>
+    <h5><a name="q3"></a>服务器的延迟稳定吗？</h5>
+    <hr class="sub-hr" align="left">
+    <h5 class="answer">我们没有很多资金去购买云服务器或服务器托管。<br>服务器现阶段使用电信公网IP<br>服务器延迟无法保证绝对稳定，会受到使用的运营商或所在地区的影响(湖北省应该是比较快的)。</h5>
+    <div class="separate"></div>
+    <h5><a name="q4"></a>上文说你们很缺资金，那为何不接受赞助费？</h5>
+    <hr class="sub-hr" align="left">
+    <h5 class="answer">赞助关系到金钱问题，就算是赞助者自愿，我们也不想因金钱问题产生其他的各类问题。<br>除非服务器出现因资金问题无法保证在线的情况，我们不会接受赞助费。</h5>
+    <div class="separate"></div>
+    <h5><a name="q5"></a>我很想帮助运营服务器，我该怎么做？</h5>
+    <hr class="sub-hr" align="left">
+    <h5 class="answer">我们非常感谢您能帮助运营服务器，但因为现阶段服务器不接受赞助费，您可以在群内询问其他赞助方式</h5>
+    <div class="separate"></div>
+    <h5><a name="q6"></a>这个怎么弄，那个怎么弄？</h5>
+    <hr class="sub-hr" align="left">
+    <h5 class="answer">如果遇到客户端问题，请先自行百度，无解后再提问。对于敏感问题，如“代理”“VPN”等，请自行解决。<br>关于提问，这篇文章写的挺好：<a target="_blank"
+        href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a>
+    </h5>
+    <div class="separate"></div>
+    <h5><a name="q7"></a>你们服务器好垃圾，你们服务器肯定没人玩的。</h5>
+    <hr class="sub-hr" align="left">
+    <h5 class="answer">我们服务器不是为了迎合所有玩家而开启的，如果服务器不适合你，可以选择潜水/退服。</h5>
+    <div class="separate"></div>
+    <hr class="center-hr">
+    <h5 class="center">服务器规则及群规则</h5>
+    <div class="separate"></div>
+    <h5 class="rules">
+      熊服、开挂、破坏他人游戏体验将直接取消所有服务器白名单。
+      <br><br>群内禁止广告，一旦发现直接踢出。群内可以宣传其他公益生电服，对于宣传商业服或过度宣传服务器的，也将直接踢出。
+      <br>禁止国际政治相关话题，也禁止在言语中夹杂对任何国家的主观批判，
+      <br>禁止过度(或给他人造错反感)发送“爱国言论”，
+      <br>不排斥红包和涩图，但也禁止过度发送，
+      <br>第一次会给予警告，第二次则禁言，情况严重将直接踢出。
+      <br><br>欢迎提出对服务器的任何建议。
+      <br><br>服务器管理员对此规则具有最终解释权。
+      <br><br>[此服务器及群规则并未制定完成]
+    </h5>
+    <div class="separate"></div>
+    <hr class="center-hr">
+    <div id="join_us" class="row center">
+      <!-- Dropdown Trigger -->
+      <a class='dropdown-button btn waves-effect waves-light' data-beloworigin="true" href='#'
+        data-activates='dropdown1'>join us</a>
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="https://jq.qq.com/?_wv=1027&k=Ot8SRDbh" target="_blank">QQ</a></li>
+        <li><a href="https://discord.gg/zQzBPCW" target="_blank">Discord</a></li>
+        <li><a href="https://chat.114514.ovh" target="_blank">Rocket Chat</a></li>
+        <li><a href="https://t.me/aruCraftR" target="_blank">Telegram</a></li>
+      </ul>
+    </div>
+    <h5 class="center" style="margin-top: 100px;">加入我们即表示您已了解入服常见问题并同意[服务器规则及群规则]</h5>
+  </div>
+
+  <!--Scripts-->
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.staticfile.org/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="https://cdn.staticfile.org/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/general.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/init.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/common.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/ie-detect.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/waifu-tips.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/live2d.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/live2D-config.min.js"></script>
+
+
+</body>
+
+</html>

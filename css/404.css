@@ -1,0 +1,19 @@
+#content {
+  position: relative;
+  top: 200px;
+  height: 70vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  background-color: #fff;
+  text-align: center;
+}
+
+#error {
+  color: tomato;
+  margin-top: 0px;
+}
+
+#content img {
+  width: auto;
+  height: 20vw;
+}

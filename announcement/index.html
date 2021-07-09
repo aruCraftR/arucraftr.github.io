@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+  <title>aruCraftR</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets/icon/favicon.ico">
+
+  <!-- CSS  -->
+  <link href="https://cdn.staticfile.org/material-design-icons/3.0.2/iconfont/material-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet"
+    media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/css/common.min.css" type="text/css"
+    rel="stylesheet" media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/css/announcement.min.css" type="text/css"
+    rel="stylesheet" media="screen,projection">
+  <link href="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/waifu.min.css"
+    rel="stylesheet" type="text/css">
+</head>
+
+<body style="overflow: hidden; background-color: #fff">
+  <div id="load_page">
+    <h2 style="color:dimgrey; line-height: 100vh">加载中</h3>
+  </div>
+  <div id="background"></div>
+  <!--Live2D-->
+  <div class="waifu reveal" data-reveal-distance="300px" data-reveal-delay="500" data-reveal-duration="1200">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+      <span class="fui-home" style="line-height: 20px;"></span>
+      <span class="fui-chat" style="line-height: 20px;"></span>
+      <span class="fui-eye" style="line-height: 20px;"></span>
+      <span class="fui-user" style="line-height: 20px;"></span>
+      <span class="fui-photo" style="line-height: 20px;"></span>
+      <span class="fui-info-circle" style="line-height: 20px;"></span>
+      <span class="fui-cross" style="line-height: 20px;"></span>
+    </div>
+  </div>
+  <!--导航栏-->
+  <div class="navbar-fixed">
+    <nav style="background-color: #ffffff00;" role="navigation" class="reveal" data-reveal-distance="-110px"
+      data-reveal-duration="1000">
+      <div class="navbar-bg" style="opacity: 0;"></div>
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="../" class="brand-logo">aruCraftR</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../gallery" class="teal-text text-lighten-2">Gallery </a></li>
+          <li><a href="../players" class="teal-text text-lighten-2">Players </a></li>
+          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
+          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container" id="top-container">
+        <ul class="collapsible popout" data-collapsible="accordion">
+          <li class="reveal" data-reveal-origin="left" data-reveal-distance="200px" data-reveal-delay="250"
+            data-reveal-duration="500">
+            <div class="collapsible-header"><i class="material-icons">info_outline</i>服务器公告</div>
+            <div class="collapsible-body">
+              <p>生存服(后台:sophie_desu)版本：1.16.4 1.16.5
+                <br>IP：arucraftr.club
+                <br>----------
+                <br>MOD服(后台:Track07_cda)：
+                <br>IP：mod.arucraftr.club
+                <br>MOD服需要下载整合包(在QQ群文件中)
+                <br>----------
+                <br>快照服(后台:circuit_Z)版本为最新快照
+                <br>IP：snapshot.arucraftr.club
+                <br>----------
+                <br>非常感谢Track07_cda提供网页地图转发以及Rocket Chat
+              </p>
+            </div>
+          </li>
+          <li class="reveal" data-reveal-origin="left" data-reveal-distance="200px" data-reveal-delay="500"
+            data-reveal-duration="500">
+            <div class="collapsible-header"><i class="material-icons">restore</i>关于各页面访问速度</div>
+            <div class="collapsible-body">
+              <p>网页使用Github Page托管，访问速度已进行优化(使用各种反代、CDN、文件压缩)，如果仍然觉得慢可以使用代理
+                <br>网页地图和Rocket Chat访问的目标位置都在国外，觉得慢请使用代理(网页地图用电信应该是不会卡的，移动估计没救)
+              </p>
+            </div>
+          </li>
+          <li class="reveal" data-reveal-origin="left" data-reveal-distance="200px" data-reveal-delay="750"
+            data-reveal-duration="500">
+            <div class="collapsible-header"><i class="material-icons">assessment</i>服务器状态</div>
+            <div class="collapsible-body status-content">
+              <p class="status-tips">
+              </p>
+              <ul class="status-ul" align="center">
+                <li class="server-status" data-server-id="aruCraftR_Waterfall">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets/icon/survival-server-icon.png">
+                  <div>
+                    <span>生存服[arucraftr.club]</span><br><span class="version"></span>
+                    <div class="placeholder"></div><span class="player"></span><br>
+                    <p class="motd">状态：等待获取</p>
+                  </div>
+                </li>
+                <li class="server-status" data-server-id="CreateObServer">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets/icon/CreateOb-server-icon.png">
+                  <div>
+                    <span>MOD服[暂时停止运行]</span><br><span class="version"></span>
+                    <div class="placeholder"></div><span class="player"></span><br>
+                    <p class="motd">状态：等待获取</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.staticfile.org/materialize/0.97.8/js/materialize.min.js"></script>
+  <script src="https://cdn.staticfile.org/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/general.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/common.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/init.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/announcement.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/ie-detect.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/waifu-tips.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets-online-api/live2d.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/js/live2D-config.min.js"></script>
+
+
+</body>
+
+</html>
