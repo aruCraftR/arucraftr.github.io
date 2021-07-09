@@ -1,9 +1,8 @@
 from json import load
+from os import system
 
 with open('names.json', 'r') as f:
     names = load(f)
-
-names.sort()
 
 
 def outhtml():
@@ -16,3 +15,4 @@ def outhtml():
 
 
 outhtml()
+system('pause')
