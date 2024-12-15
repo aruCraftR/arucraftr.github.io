@@ -5,19 +5,7 @@
   box-sizing: border-box;
 }
 
-/* 统一定义 */
-/* 使用更高优先级的选择器 */
-body a {
-  transform: scale(1);
-  transition: transform 0.2s ease, font-size 0.2s ease;
-}
-
-body a:hover {
-  transform: scale(1.1);
-  font-size: 20px;
-}
-
-
+/* 全局字体与背景样式 */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -27,6 +15,35 @@ body {
   text-align: center;
 }
 
+/* 全局链接样式 */
+a {
+  text-decoration: none;
+  color: #c7c7c7;
+  transform: scale(1);
+  transition: transform 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.1);
+  color: #9fa8ae;
+}
+
+/* 按钮的通用样式 */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.button:hover {
+  border-color: #969696;
+  background-color: transparent;
+}
+
+/* 页头样式 */
 header {
   text-align: center;
   padding: 20px 0;
@@ -38,12 +55,13 @@ header .logo {
 }
 
 header .logo-divider {
-  width: 80%;             /* 横条宽度 */
-  height: 2px;            /* 横条高度 */
-  background-color: #9b9a9a; /* 横条颜色 */
-  margin: 20px auto;      /* 垂直方向的间距 */
+  width: 80%;
+  height: 2px;
+  background-color: #9b9a9a;
+  margin: 20px auto;
 }
 
+/* 导航菜单 */
 .nav-container {
   margin: 50px 0;
 }
@@ -58,33 +76,15 @@ nav ul li {
   margin: 0 20px;
 }
 
-nav ul li a {
-  color: #c7c7c7;                /* 按钮文字颜色 */
-  text-decoration: none;      /* 去掉下划线 */
-  font-size: 20px;            /* 字体大小 */
-  padding: 10px 20px;         /* 内边距 */
-  border: 2px solid #ddd;    /* 添加圆角边框，颜色为 #ddd */
-  border-radius: 10px;        /* 圆角半径 */
-  background-color: transparent; /* 设置背景为透明 */
-}
-
-nav ul li a:hover {
-  border-color: #969696;         /* 悬停时改变边框颜色 */
-  color: #9fa8ae;                /* 悬停时改变文字颜色 */
-  border-radius: 10px;        /* 保持圆角边框 */
-  padding: 10px 20px;
-  background-color: transparent; /* 设置背景为透明 */
-}
-
 /* 公告样式 */
 .announcement {
-  display: inline-block;  /* 使公告与按钮对齐 */
+  display: inline-block;
   background-color: transparent;
-  border: 2px solid #ddd;  /* 圆角边框 */
-  border-radius: 10px;      /* 圆角效果 */
+  border: 2px solid #ddd;
+  border-radius: 10px;
   color: #c7c7c7;
   padding: 20px;
-  margin: 30px 20px;        /* 上下间距，左右间距与按钮一致 */
+  margin: 30px 20px;
   font-size: 18px;
   text-align: center;
 }
@@ -93,90 +93,113 @@ nav ul li a:hover {
   margin: 0;
 }
 
+/* 页脚分割线样式 */
+footer .server-panel-divider {
+  width: 80%;
+  height: 2px;
+  background-color: #9b9a9a;
+  margin: 20px auto;
+}
+
+/* 页脚样式 */
 footer {
   text-align: center;
-  padding: 0;                  /* 去掉内边距 */
-  background-color: transparent; /* 去掉背景色，变为透明 */
-  color: #fff;                 /* 文字颜色保持为白色 */
-  border-top: none;            /* 去掉顶部边框 */
-  margin: 0;                   /* 去掉外边距 */
+  padding: 0;
+  background-color: transparent;
+  color: #fff;
+  margin: 0;
 }
 
-footer .server-panel-divider {
-  width: 80%;              /* 横条宽度 */
-  height: 2px;             /* 横条高度 */
-  background-color: #9b9a9a;  /* 横条颜色 */
-  margin: 20px auto;       /* 垂直方向的间距 */
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-footer .server-panel-btn {
-  color: #dbdbdb;                  /* 按钮文字颜色 */
-  text-decoration: none;        /* 去掉下划线 */
-  font-size: 20px;              /* 调小字体大小 */
-  padding: 0px 0px;            /* 调小内边距 */
-  border: none;                 /* 去掉边框 */
-  background-color: transparent;/* 背景透明 */
+.footer-item {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-footer .server-panel-btn:hover {
-  color: #555;                  /* 悬停时改变文字颜色 */
+.footer-item a {
+  color: #c7c7c7;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  display: inline-block;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-/* 针对小屏幕设备 (最大宽度 768px) */
+/* 悬停效果（同时缩放边框和整体按钮） */
+.footer-item:hover {
+  transform: scale(1.1);
+  border-color: #9fa8ae;
+}
+
+.footer-item a:hover {
+  color: #9fa8ae;
+}
+
+
+/* 响应式设计：针对小屏幕设备 */
 @media screen and (max-width: 768px) {
   header .logo {
-    max-width: 70%;  /* 调整 logo 大小 */
+    max-width: 70%;
   }
 
   .announcement {
     padding: 15px;
-    font-size: 16px;  /* 减小字体 */
-    word-wrap: break-word;  /* 确保公告内容在手机上换行 */
+    font-size: 16px;
+    word-wrap: break-word;
   }
 
   nav ul li {
-    display: block;  /* 使导航按钮垂直排列 */
+    display: block;
     margin: 30px 0;
   }
 
   nav ul li a {
-    font-size: 18px;  /* 调小字体 */
-    padding: 8px 16px; /* 调小内边距 */
+    font-size: 16px;
+    padding: 8px 12px;
   }
 
-  footer .server-panel-btn {
-    font-size: 18px;  /* 调小按钮字体 */
-    padding: 8px 16px; /* 调小按钮内边距 */
+  footer .footer-container {
+    flex-wrap: wrap; /* 小屏幕下允许按钮换行 */
+    justify-content: center; /* 保证按钮水平居中对齐 */
   }
 
-  footer .server-panel-divider {
-    width: 90%;  /* 调整横条宽度 */
+  footer .footer-item {
+    margin: 10px; /* 调整按钮间距，避免外侧贴边 */
   }
 }
 
-/* 针对极小屏幕设备 (最大宽度 480px) */
 @media screen and (max-width: 480px) {
   header .logo {
-    max-width: 80%;  /* 进一步调整 logo 大小 */
+    max-width: 80%;
   }
 
   .announcement {
-    font-size: 14px;  /* 更小的字体 */
+    font-size: 14px;
     padding: 10px;
-    word-wrap: break-word; 
   }
 
   nav ul li a {
-    font-size: 16px;  /* 更小的字体 */
-    padding: 6px 12px; /* 更小的按钮 */
+    font-size: 14px;
+    padding: 6px 10px;
   }
 
-  footer .server-panel-btn {
-    font-size: 16px;  /* 更小的字体 */
-    padding: 6px 12px; /* 更小的按钮 */
+  footer .footer-container {
+    flex-wrap: wrap; /* 小屏幕下允许按钮换行 */
+    justify-content: center; /* 保证按钮水平居中对齐 */
   }
 
-  footer .server-panel-divider {
-    width: 100%;  /* 横条宽度调整为 100% */
+  footer .footer-item {
+    margin: 10px; /* 调整按钮间距，避免外侧贴边 */
   }
 }
