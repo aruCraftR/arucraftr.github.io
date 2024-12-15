@@ -9,13 +9,6 @@
   <br> 🚀 aruCraftR 🚀 <br>
 </h1>
 
-**目前没有做手机样式适配的计划**
-
-#### 网页访问地址(2 个源都可以，均不走 Cloudflare 代理)
-
-**1.Vercel：** https://www.arucraftr.club/
-
-**2.Github Pages：** https://github-page.arucraftr.club/
 
 **网站在 PC 上有样式显示 bug，或对网站有建议(包括新增页面)，可以在 qq、discord 或 issues 中提出**
 
