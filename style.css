@@ -34,19 +34,20 @@ a:hover {
   padding: 10px 20px;
   font-size: 20px;
   font-weight: bold; /* 设置字体为粗体 */
-  border: 4px solid rgba(255, 255, 255, 0.5); /* 半透明边框 */
+  border: 4px solid rgba(255, 255, 255, 0.5);/* 半透明边框 */
   border-radius: 10px;
   background-color: transparent;
   backdrop-filter: blur(10px); /* 毛玻璃效果 */
   -webkit-backdrop-filter: blur(10px); /* 兼容Safari浏览器 */
-  color: #fff; /* 设置字体颜色为白色 */
-  transition: border-color 0.3s ease, background-color 0.3s ease; /* 添加过渡效果 */
+  color: #fff;/* 设置字体颜色 */
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.2s ease; /* 确保 transform 也被过渡 */
   margin-top: 0px; /* 缩小按钮与上方切割线的距离 */
 }
 
 .button:hover {
-  border-color: rgba(255, 255, 255, 0.7); /* 鼠标悬停时加深边框颜色 */
-  background-color: rgba(255, 255, 255, 0.1); /* 增加悬停时的背景色 */
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1); /* 鼠标悬停时添加缩放效果 */
 }
 
 
