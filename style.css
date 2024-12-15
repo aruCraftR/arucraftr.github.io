@@ -183,7 +183,7 @@ footer .footer-container {
   display: inline-block;
   margin: 0 10px; /* 调整按钮的左右间距 */
   padding: 1px;
-  border: 2px solid #ddd;
+  border: 2px solid #dddddd53;
   border-radius: 10px;
   background-color: transparent;
   transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -192,7 +192,7 @@ footer .footer-container {
 /* 悬停效果（同时缩放边框和整体按钮） */
 .footer-item:hover {
   transform: scale(1.1);
-  border-color: #9fa8ae;
+  border-color: #9fa8ae62;
 }
 
 .footer-item a {
