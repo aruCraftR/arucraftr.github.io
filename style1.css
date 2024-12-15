@@ -19,16 +19,17 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
+.error-container h1 {
   font-size: 5em;
   color: #e74c3c;
   margin-bottom: 20px;
 }
 
-p {
+.error-container p {
   font-size: 18px;
   color: #bbb;
   margin-bottom: 20px;
+  line-height: 1.5;  /* 调整行高，使文本垂直居中 */
 }
 
 a.back-btn {
@@ -43,4 +44,30 @@ a.back-btn {
 
 a.back-btn:hover {
   background-color: #0056b3;
+}
+
+/* 媒体查询，适配手机 */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .error-container {
+    width: 60%; /* 使容器宽度在小屏设备上适应 */
+    margin: 0 5%; /* 给容器左右两边添加百分比的边距 */
+    padding: 20px 30px; /* 减少内边距以适配小屏幕 */
+  }
+
+  .error-container h1 {
+    font-size: 4em; /* 在小屏幕上减小字体 */
+  }
+
+  .error-container p {
+    font-size: 17px; /* 在小屏幕上减小文字大小 */
+  }
+
+  a.back-btn {
+    font-size: 15px; /* 缩小按钮文字 */
+    padding: 8px 16px; /* 缩小按钮的内边距 */
+  }
 }
