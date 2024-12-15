@@ -1,3 +1,21 @@
+html {
+  scroll-behavior: smooth; /* 启用平滑滚动 */
+}
+
+
+@keyframes bounce-back {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 /* 默认样式 (适用于桌面设备) */
 * {
   margin: 0;
