@@ -76,24 +76,55 @@ nav ul li {
   margin: 0 20px;
 }
 
-/* 公告样式 */
+/* 周目更替公告容器样式 */
 .announcement {
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.2); /* 半透明背景 */
-  border: 2px solid #dddddd00;
-  border-radius: 10px;
-  color: #c7c7c7;
   padding: 20px;
-  margin: 30px 20px;
-  font-size: 18px;
-  text-align: center;
-  backdrop-filter: blur(10px); /* 毛玻璃效果，调整数值可以控制模糊程度 */
-  -webkit-backdrop-filter: blur(10px); /* 兼容Webkit浏览器 */
+  margin: 30px auto;
+  max-width: 800px; /* 设置最大宽度 */
+  background-color: rgba(255, 255, 255, 0.3); /* 半透明背景 */
+  backdrop-filter: blur(10px); /* 毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* 兼容Safari浏览器 */
+  border-radius: 15px; /* 圆角效果 */
+  color: #fff; /* 字体颜色 */
+  text-align: center; /* 居中文本 */
 }
 
-/* 其它公告样式 */
-.announcement p {
-  margin: 0;
+/* 周目更替公告容器样式 */
+.announcement {
+  padding: 20px;
+  margin: 30px auto; /* 上下间距自动，左右间距保持百分比 */
+  width: 90%; /* 容器宽度为页面的90% */
+  max-width: 800px; /* 最大宽度为800px，防止在大屏幕下过宽 */
+  background-color: rgba(255, 255, 255, 0.3); /* 半透明背景 */
+  backdrop-filter: blur(10px); /* 毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* 兼容Safari浏览器 */
+  border-radius: 15px; /* 圆角效果 */
+  color: #fff; /* 字体颜色 */
+  text-align: center; /* 居中文本 */
+}
+
+/* 周目更替公告标题样式 */
+.announcement h2 {
+  font-size: 28px; /* 增大标题字体 */
+  margin-bottom: 20px; /* 增加标题与公告内容之间的间距 */
+  font-weight: bold;
+}
+
+/* 公告内容每一部分的样式 */
+.announcement .section {
+  margin-bottom: 20px; /* 增加每个部分之间的间距 */
+  padding-bottom: 15px; /* 留出空隙 */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5); /* 细线分割 */
+}
+
+.announcement .section:last-child {
+  border-bottom: none; /* 隐藏最后一部分的分割线 */
+}
+
+.announcement .section strong {
+  font-size: 18px; /* 设置子标题字体大小 */
+  margin-bottom: 10px; /* 增加子标题和内容之间的间距 */
+  display: block;
 }
 
 
