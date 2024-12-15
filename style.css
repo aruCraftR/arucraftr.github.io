@@ -1,3 +1,4 @@
+/* 默认样式 (适用于桌面设备) */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +20,7 @@ header {
 }
 
 header .logo {
-  max-width: 20%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -28,12 +29,6 @@ header .logo-divider {
   height: 2px;            /* 横条高度 */
   background-color: #9b9a9a; /* 横条颜色 */
   margin: 20px auto;      /* 垂直方向的间距 */
-}
-
-
-header .logo {
-  max-width: 50%;
-  height: auto;
 }
 
 .nav-container {
@@ -112,4 +107,63 @@ footer .server-panel-btn {
 
 footer .server-panel-btn:hover {
   color: #555;                  /* 悬停时改变文字颜色 */
+}
+
+/* 针对小屏幕设备 (最大宽度 768px) */
+@media screen and (max-width: 768px) {
+  header .logo {
+    max-width: 70%;  /* 调整 logo 大小 */
+  }
+
+  .announcement {
+    width: 90%;  /* 让公告适应小屏幕 */
+    padding: 15px;
+    font-size: 16px;  /* 减小字体 */
+  }
+
+  nav ul li {
+    display: block;  /* 使导航按钮垂直排列 */
+    margin: 20px 0;
+  }
+
+  nav ul li a {
+    font-size: 18px;  /* 调小字体 */
+    padding: 8px 16px; /* 调小内边距 */
+  }
+
+  footer .server-panel-btn {
+    font-size: 18px;  /* 调小按钮字体 */
+    padding: 8px 16px; /* 调小按钮内边距 */
+  }
+
+  footer .server-panel-divider {
+    width: 90%;  /* 调整横条宽度 */
+  }
+}
+
+/* 针对极小屏幕设备 (最大宽度 480px) */
+@media screen and (max-width: 480px) {
+  header .logo {
+    max-width: 80%;  /* 进一步调整 logo 大小 */
+  }
+
+  .announcement {
+    width: 100%;  /* 让公告宽度为 100% */
+    font-size: 14px;  /* 更小的字体 */
+    padding: 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;  /* 更小的字体 */
+    padding: 6px 12px; /* 更小的按钮 */
+  }
+
+  footer .server-panel-btn {
+    font-size: 16px;  /* 更小的字体 */
+    padding: 6px 12px; /* 更小的按钮 */
+  }
+
+  footer .server-panel-divider {
+    width: 100%;  /* 横条宽度调整为 100% */
+  }
 }
