@@ -1,200 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>aruCraftR</title>
-  <link rel="icon" href="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/assets/icon/favicon.ico">
-
-  <!-- CSS  -->
-  <link href="https://cdn.staticfile.org/material-design-icons/3.0.2/iconfont/material-icons.min.css" rel="stylesheet">
-  <link href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet"
-    media="screen,projection">
-  <link href="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/css/common.min.css" type="text/css"
-    rel="stylesheet" media="screen,projection">
-  <link href="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/css/index.min.css" type="text/css"
-    rel="stylesheet" media="screen,projection">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <header>
+    <img src="logo.png" alt="aruCraftR Logo" class="logo">
+    <div class="logo-divider"></div>  <!-- 添加横条 -->
+  </header>
+  
 
-<body style="overflow: hidden; background-color: #fff;">
-  <div id="load_page">
-    <h2 style="color:dimgrey; line-height: 100vh">加载中</h3>
-  </div>
-  <!--导航栏-->
-  <div class="navbar-fixed">
-    <nav style="background-color: #ffffff00;" role="navigation" class="reveal" data-reveal-distance="-110px"
-      data-reveal-duration="1000">
-      <div class="navbar-bg" style="opacity: 0;"></div>
-      <div class="nav-wrapper container">
-        <a id="logo-container" href="./" class="brand-logo">aruCraftR</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="./announcement" class="teal-text text-lighten-2">Announcement </a></li>
-          <li><a href="./gallery" class="teal-text text-lighten-2">Gallery </a></li>
-          <li><a href="./players" class="teal-text text-lighten-2">Players </a></li>
-          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
-          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="./announcement" class="teal-text text-lighten-2">Announcement </a></li>
-          <li><a href="https://map.arucraftr.club" class="teal-text text-lighten-2">BlueMap</a></li>
-          <li><a href="https://github.com/aruCraftR" class="teal-text text-lighten-2" target="_blank">Github</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
+  <div class="nav-container">
+    <nav>
+      <ul>
+        <li><a href="https://info.arucraftr.org/" target="_blank">mc百科宣传页</a></li>
+        <li><a href="https://re.arucraftr.org/" target="_blank">审核问卷</a></li>
+        <li><a href="https://alist.arucraftr.org/" target="_blank">服务器下载站</a></li>
+      </ul>
     </nav>
   </div>
 
-  <div id="banner_wave_1"></div>
-  <div id="banner_wave_2"></div>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container" id="top-container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2 reveal" data-reveal-distance="-50px"
-          data-reveal-duration="800"><img id="main-logo"
-            src="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/assets/logo/logo.png" alt="main logo" />
-        </h1>
-        <div class="row center">
-          <h5 class="header col s12 light reveal" data-reveal-distance="-50px" data-reveal-delay="400"
-            data-reveal-duration="600">A Minecraft Server </h5>
-        </div>
-        <div id="join_us" class="row center reveal" data-reveal-distance="-50px" data-reveal-delay="600"
-          data-reveal-duration="600">
-          <a class='btn waves-effect waves-light' href="./join-us">join us</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="https://img.imgdb.cn/item/606a88c88322e6675c39e68b.png"
-        alt="Unsplashed background img 1"></div>
+  <!-- 添加周目更替公告 -->
+  <div class="announcement">
+    <p><strong>周目更替公告</strong> <br> <span>科技服新周目CTNH已开启，上一周目即将关闭</span> <br> 2024/9/22</p>
   </div>
 
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-duration="500">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">与 时 俱 进</h5>
-            <p class="light center">服务器为公益服<br>版本将尽量第一时间同步到最新版<br>
-          </div>
-        </div>
-
-        <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-delay="250" data-reveal-duration="500">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">没 有 限 制</h5>
-            <p class="light center">你可以尽情建造和使用任何红石机器<br>没有任何对原版特性的限制<br>这里有<a href="./server-info">详细的服务端配置</a></p>
-          </div>
-        </div>
-
-
-        <div class="col s12 m4 reveal" data-reveal-distance="40px" data-reveal-delay="500" data-reveal-duration="500">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">团 结 友 好</h5>
-            <p class="light center">我们欢迎任何领域的mc玩家<br>无论是红石、建筑甚至是技术支持<br>亦或者，你是喜欢玩其他游戏的玩家，我们同样欢迎</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center reveal" data-reveal-distance="-50px" data-reveal-duration="500">
-          <h5 class="header col s12 light" style="color:rgba(50, 50, 50, 0.9)">这里没有任何限制<br>你可以发挥你的特长<br>只有一个要求，不要<a
-              class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="最可怕的不是熊，是不懂红石还非要用精密机器的小天才">熊服</a>
-          </h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="https://img.imgdb.cn/item/606a743b8322e6675c26df8e.png"
-        alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4 class="reveal" data-reveal-distance="-40px" data-reveal-duration="500">历经两周目</h4>
-          <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px"
-            data-reveal-delay="300" data-reveal-duration="500">第一周目为Craftr服务器，服主为Yikex。</p>
-          <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px"
-            data-reveal-delay="600" data-reveal-duration="500">第二周目，也就是现周目，服主为sophie_desu。</p>
-          <p class="left-align light reveal" data-reveal-origin="left" data-reveal-distance="50px"
-            data-reveal-delay="900" data-reveal-duration="500"> - 在此也感谢Track07_cda与YGOOB的帮助，当然，还有<a class="tooltipped"
-              data-position="bottom" data-delay="50" data-tooltip="建议服务器名称为KDH和GayCraft是什么啊喂">积极提出建议</a>的大家！</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">
-            <!--第3张背景图中的字-->
-          </h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="https://img.imgdb.cn/item/606a734b8322e6675c2601fe.png"
-        alt="Unsplashed background img 3"></div>
-  </div>
-
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">aruCraftR</h5>
-          <p class="grey-text text-lighten-4">网页仍处于开发阶段，如有任何建议，请前往QQ群或Discord中的dev频道提出</p>
-          <img id="count" src="https://count.getloli.com/get/@arucraftr?theme=rule34" alt=":name" />
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">主页面索引</h5>
-          <ul>
-            <li><a class="white-text" href="./announcement">公告</a></li>
-            <li><a class="white-text" href="./players">玩家列表</a></li>
-            <li><a class="white-text" href="./gallery">画廊</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">其他页面</h5>
-          <ul>
-            <li><a class="white-text" href="./faq">FAQ</a></li>
-            <li><a class="white-text" href="./join-us">入服须知</a></li>
-            <li><a class="white-text" href="./server-info">服务端详细信息</a></li>
-          </ul>
-        </div>
-      </div>
+  <footer>
+    <div class="server-panel-divider"></div>  <!-- 添加横条 -->
+    <a href="https://mcsm.arucraftr.org/" target="_blank" class="server-panel-btn">服务器面板</a>
   </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <script src="https://cdn.staticfile.org/materialize/0.97.8/js/materialize.min.js"></script>
-  <script src="https://cdn.staticfile.org/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-  <script src="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/js/general.min.js"></script>
-  <script src="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/js/init.min.js"></script>
-  <script src="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/js/common.min.js"></script>
-  <script src="https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/js/ie-detect.min.js"></script>
-
+  
+  
 </body>
-
 </html>
