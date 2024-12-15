@@ -5,7 +5,8 @@
 #banner_wave_1 {
   width: auto;
   height: 65px;
-  background: url("https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets/decorations/wave1.png") repeat-x;
+  background: url('https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/assets/decorations/wave1.png')
+    repeat-x;
   filter: alpha(opacity=80);
   position: absolute;
   bottom: 0;
@@ -14,7 +15,7 @@
   z-index: 5;
   opacity: 1;
   transiton-property: opacity, bottom;
-  transition-duration: .4s, .4s;
+  transition-duration: 0.4s, 0.4s;
   animation-name: move2;
   animation-duration: 240s;
   animation-fill-mode: backwards;
@@ -25,7 +26,8 @@
 #banner_wave_2 {
   width: auto;
   height: 80px;
-  background: url("https://cdn.jsdelivr.net/gh/aruCraftR/arucraftr.github.io/assets/decorations/wave2.png") repeat-x;
+  background: url('https://jsd.onmicrosoft.cn/gh/aruCraftR/arucraftr.github.io/assets/decorations/wave2.png')
+    repeat-x;
   filter: alpha(opacity=80);
   position: absolute;
   bottom: 0;
@@ -34,7 +36,7 @@
   z-index: 4;
   opacity: 1;
   transiton-property: opacity, bottom;
-  transition-duration: .4s, .4s;
+  transition-duration: 0.4s, 0.4s;
   animation-name: move2;
   animation-duration: 160s;
   animation-fill-mode: backwards;
@@ -43,7 +45,7 @@
 }
 
 @keyframes move2 {
-	100% {
-		background-position: -100% 0;
-	}
+  100% {
+    background-position: -100% 0;
+  }
 }

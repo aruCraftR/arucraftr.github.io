@@ -1,3 +1,5 @@
+"use strict";
+
 /* 可直接修改部分参数 */
 live2d_settings['waifuFontSize'] = '17px';
 live2d_settings['canCloseLive2d'] = false;
