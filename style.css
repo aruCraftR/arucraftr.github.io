@@ -79,19 +79,23 @@ nav ul li {
 /* 公告样式 */
 .announcement {
   display: inline-block;
-  background-color: transparent;
-  border: 2px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+  border: 2px solid #dddddd00;
   border-radius: 10px;
   color: #c7c7c7;
   padding: 20px;
   margin: 30px 20px;
   font-size: 18px;
   text-align: center;
+  backdrop-filter: blur(10px); /* 毛玻璃效果，调整数值可以控制模糊程度 */
+  -webkit-backdrop-filter: blur(10px); /* 兼容Webkit浏览器 */
 }
 
+/* 其它公告样式 */
 .announcement p {
   margin: 0;
 }
+
 
 /* 页脚分割线样式 */
 footer .server-panel-divider {
@@ -120,7 +124,7 @@ footer .footer-container {
 .footer-item {
   display: inline-block;
   margin: 10px;
-  padding: 10px;
+  padding: 1px;
   border: 2px solid #ddd;
   border-radius: 10px;
   background-color: transparent;
