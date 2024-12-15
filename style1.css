@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;  /* 确保背景图片覆盖整个屏幕 */
+}
+
+.error-container {
+  text-align: center;
+  background-color: rgba(51, 51, 51, 0.7);  /* 半透明的背景，增强可读性 */
+  border-radius: 8px;
+  padding: 30px 40px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 5em;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+a.back-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+a.back-btn:hover {
+  background-color: #0056b3;
+}
