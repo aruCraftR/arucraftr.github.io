@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+/* 统一定义 */
+/* 使用更高优先级的选择器 */
+body a {
+  transform: scale(1);
+  transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+body a:hover {
+  transform: scale(1.1);
+  font-size: 20px;
+}
+
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -116,9 +129,9 @@ footer .server-panel-btn:hover {
   }
 
   .announcement {
-    width: 90%;  /* 让公告适应小屏幕 */
     padding: 15px;
     font-size: 16px;  /* 减小字体 */
+    word-wrap: break-word;  /* 确保公告内容在手机上换行 */
   }
 
   nav ul li {
@@ -148,9 +161,9 @@ footer .server-panel-btn:hover {
   }
 
   .announcement {
-    width: 100%;  /* 让公告宽度为 100% */
     font-size: 14px;  /* 更小的字体 */
     padding: 10px;
+    word-wrap: break-word; 
   }
 
   nav ul li a {
