@@ -17,15 +17,16 @@ html {
 }
 
 /* 页面消失动画 */
-.hide {
+.hide:not(.no-fade) {
   opacity: 0;
   transition: opacity 0.2s ease-out;
 }
 
 /* 页面加载时渐入动画 */
-.fade-in {
+.fade-in:not(.no-fade) {
   animation: fadeIn 0.2s ease-in-out;
 }
+
 
 /* 排除渐变效果的元素 */
 .logo.no-fade, .main-nav.no-fade {
