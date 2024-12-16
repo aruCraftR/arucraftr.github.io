@@ -68,6 +68,26 @@ a:hover {
   transform: scale(1.1); /* 鼠标悬停时添加缩放效果 */
 }
 
+/* 通用横条样式 */
+.divider {
+  width: 80%;
+  height: 4px;
+  background-color: rgba(155, 154, 154, 0.4); /* 半透明背景色 */
+  margin: 20px auto; /* 居中对齐 */
+  backdrop-filter: blur(4px); /* 毛玻璃效果 */
+  -webkit-backdrop-filter: blur(4px); /* Safari 兼容性 */
+  border-radius: 1px; /* 让横条边缘更柔和 */
+}
+
+/* 页脚版权信息样式 */
+footer .copyright {
+  text-align: center; /* 居中对齐 */
+  font-size: 14px; /* 字体大小 */
+  color: #777; /* 字体颜色 */
+  margin: 20px 0; /* 上下间距 */
+  font-family: Arial, sans-serif; /* 字体样式 */
+}
+
 
 /* 页头样式 */
 header {
@@ -221,6 +241,10 @@ footer .footer-container {
     max-width: 70%;
   }
 
+  .divider {
+    width: 90%; /* 在小屏幕下让横条更贴合屏幕宽度 */
+  }
+
   .announcement {
     padding: 15px;
     font-size: 16px;
@@ -250,6 +274,10 @@ footer .footer-container {
 @media screen and (max-width: 480px) {
   header .logo {
     max-width: 80%;
+  }
+
+  .divider {
+    width: 95%; /* 更小屏幕时，适当调整宽度 */
   }
 
   .announcement {
