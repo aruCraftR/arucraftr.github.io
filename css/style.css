@@ -1,3 +1,17 @@
+/* 引入 cute.woff 字体 */
+@font-face {
+  font-family: 'CuteFont'; /* 自定义字体名称 */
+  src: url('../fonts/cute.woff') format('woff'); /* 字体文件路径 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 默认字体使用 CuteFont */
+body {
+  font-family: 'CuteFont', Arial, sans-serif; /* 设置默认字体为 CuteFont */
+}
+
+
 html {
   scroll-behavior: smooth; /* 启用平滑滚动 */
 }
@@ -99,7 +113,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: url('background.jpg') no-repeat center center fixed;
+  background: url('../images/background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -293,6 +307,7 @@ footer .footer-container {
   font-size: 18px;
   padding: 8px 16px;
   display: inline-block;
+  font-family: 'CuteFont', Arial, sans-serif; /* 设置字体为 CuteFont */
   transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
