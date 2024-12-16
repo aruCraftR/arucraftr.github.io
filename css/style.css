@@ -19,17 +19,18 @@ html {
 /* 页面消失动画 */
 .hide {
   opacity: 0;
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 /* 页面加载时渐入动画 */
 .fade-in {
-  animation: fadeIn 0.4s ease-in-out;
+  animation: fadeIn 0.2s ease-in-out;
 }
 
-/*在 body 上添加渐入效果*/
-body.fade-in {
-  animation: fadeIn 0.4s ease-in-out;
+/* 排除渐变效果的元素 */
+.logo.no-fade, .main-nav.no-fade {
+  animation: none !important;  /* 强制不应用动画 */
+  opacity: 1 !important;       /* 确保它们在页面加载时是可见的 */
 }
 
 

@@ -1,5 +1,3 @@
-// script.js
-
 // 获取当前页面的路径
 const currentPath = window.location.pathname;
 
@@ -39,8 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(`Target Page: ${targetPage}`); // 调试输出目标页面
             e.preventDefault(); // 防止直接跳转
 
-            // 给整个页面添加动画
+            // 给整个页面添加动画（不影响 logo）
             document.body.classList.add("hide");
+            document.querySelector('.logo').classList.add('no-fade');  // 为 logo 添加 'no-fade' 类，避免动画
 
             // 等待动画结束后跳转
             setTimeout(() => {
