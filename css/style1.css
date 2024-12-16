@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: url('background.jpg') no-repeat center center fixed;
+  background: url('../images/background.jpg') no-repeat center center fixed;
   background-size: cover;  /* 确保背景图片覆盖整个屏幕 */
 }
 
