@@ -20,7 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener("click", (e) => {
             const targetPage = e.target.getAttribute("href"); // 获取目标页面的 URL
             const currentPath = window.location.pathname.replace(/\/$/, ""); // 去掉尾部的 '/'
-            const targetPath = targetPage.replace(/\/$/, ""); // 去掉目标页面的尾部 '/'
+            let targetPath = targetPage.replace(/\/$/, ""); // 去掉目标页面的尾部 '/'
+
+            // 如果 targetPage 是相对路径, 则需要处理成绝对路径
+            if (targetPath.startsWith("/")) {
+                targetPath = targetPath;
+            } else {
+                targetPath = window.location.pathname.replace(/\/[^\/]+$/, "/") + targetPath;
+            }
 
             // 如果点击的链接目标是当前页面，则阻止跳转
             if (currentPath === targetPath) {
