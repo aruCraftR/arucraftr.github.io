@@ -2,6 +2,25 @@ html {
   scroll-behavior: smooth; /* 启用平滑滚动 */
 }
 
+/* 页面消失动画 */
+.hide {
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+/* 页面加载时渐入动画 */
+.fade-in {
+  animation: fadeIn 0.1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @keyframes bounce-back {
   0% {
@@ -21,6 +40,59 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* 顶部主导航栏样式 */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+  backdrop-filter: blur(10px); /* 毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* Safari 兼容性 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  margin: 15px 0; /* 增加上下间距 */
+  padding: 15px 0; /* 增加内边距 */
+  border-radius: 12px; /* 增大圆角设计 */
+  max-width: 800px; /* 设置最大宽度 */
+  width: 80%; /* 确保导航栏占屏幕宽度 */
+  margin-left: auto; /* 自动左边距 */
+  margin-right: auto; /* 自动右边距 */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin: 0 20px; /* 增加列表项间距 */
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22px; /* 增大字体大小 */
+  padding: 12px 20px; /* 增加内边距 */
+  border-radius: 6px; /* 增大边角圆度 */
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease; /* 添加文字放大的过渡效果 */
+  display: block;
+  text-align: center;
+}
+
+.main-nav a:hover {
+  background-color: rgba(78, 185, 197, 0.14);
+  color: #9fa8ae;
+  transform: scale(1.1); /* 增加文字放大的效果 */
+}
+
+/* 当前页（主页）链接的特殊样式 */
+.main-nav a.active {
+  background-color: rgba(122, 167, 215, 0); /* 主页链接的背景色 */
+  color: rgb(255, 255, 255); /* 文字颜色 */
 }
 
 /* 全局字体与背景样式 */
@@ -140,7 +212,7 @@ nav ul li {
 .announcement {
   padding: 20px;
   margin: 30px auto; /* 上下间距自动，左右间距保持百分比 */
-  width: 90%; /* 容器宽度为页面的90% */
+  width: 80%; /* 容器宽度为页面的90% */
   max-width: 800px; /* 最大宽度为800px，防止在大屏幕下过宽 */
   background-color: rgba(255, 255, 255, 0.3); /* 半透明背景 */
   backdrop-filter: blur(10px); /* 毛玻璃效果 */
@@ -245,6 +317,37 @@ footer .footer-container {
     width: 90%; /* 在小屏幕下让横条更贴合屏幕宽度 */
   }
 
+/* 调整导航栏的布局 */
+.main-nav {
+  padding: 10px 0; /* 减少上下内边距 */
+  margin: 10px auto; /* 增加间距，确保顶部和底部不紧挨，同时自动左右居中 */
+  width: 80%; /* 确保导航栏占满屏幕宽度 */
+  max-width: 1200px; /* 可选，设置一个最大宽度 */
+}
+
+/* 调整导航项的布局为垂直排列 */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* 改为竖直方向排列 */
+  align-items: center; /* 居中对齐 */
+  padding: 0;
+  margin: 0;
+}
+
+/* 调整每个列表项的间距 */
+.main-nav li {
+  margin: 10px 0; /* 增加上下间距 */
+}
+
+/* 增大链接的点击区域，确保触摸屏上操作更舒适 */
+.main-nav a {
+  font-size: 20px; /* 调整字体大小 */
+  padding: 12px 25px; /* 增加内边距，确保链接区域更大 */
+  text-align: center; /* 确保文字居中 */
+}
+
+  
   .announcement {
     padding: 15px;
     font-size: 16px;
