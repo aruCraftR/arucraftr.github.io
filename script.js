@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 console.log(`Redirecting to ${targetPage}`); // 调试输出跳转目标
                 window.location.href = targetPage; // 跳转到目标页面
-            }, 500); // 等待渐出动画完成后跳转（500ms）
+            }, 200); // 等待渐出动画完成后跳转（200ms）
         });
     });
 });
