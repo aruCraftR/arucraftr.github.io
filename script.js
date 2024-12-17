@@ -38,14 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault(); // 防止直接跳转
 
             // 给整个页面添加动画（不影响 logo）
-            document.body.classList.add("hide");
             document.querySelector('.logo').classList.add('no-fade');  // 为 logo 添加 'no-fade' 类，避免动画
+            document.querySelector('.hide-ani').classList.add("hide");
 
             // 等待动画结束后跳转
             setTimeout(() => {
                 console.log(`Redirecting to ${targetPage}`); // 调试输出跳转目标
                 window.location.href = targetPage; // 跳转到目标页面
-            }, 500); // 与 CSS 动画持续时间相同
+            }, 200); // 与 CSS 动画持续时间相同
         });
     });
 });
