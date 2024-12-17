@@ -5,39 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="icon/favicon.ico" type="image/x-icon">
   <title>画廊 - aruCraftR</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css"> <!-- 通用css -->
+  <link rel="stylesheet" href="css/style_gallery.css"> <!-- 专用css -->
 </head>
-<body class="fade-in"> <!-- 为整个页面添加fade-in类 -->
+<body>
   <header>
-    <img src="images/logo.png" alt="aruCraftR Logo" class="logo no-fade"> <!-- 添加 no-fade 类 -->
+    <img src="images/logo.png" alt="aruCraftR Logo" class="logo no-fade">
     
     <!-- 导航栏 -->
-    <nav class="main-nav no-fade"> <!-- 添加 no-fade 类 -->
-        <ul>
-          <li><a href="index.html">主页</a></li>
-          <li><a href="server-intro.html">服务器简介</a></li>
-          <li><a href="announcements.html">全部公告</a></li>
-          <li><a href="gallery.html"class="active">画廊</a></li>
-        </ul>
-      </nav>
+    <nav class="main-nav no-fade">
+      <ul>
+        <li><a href="index.html">主页</a></li>
+        <li><a href="server-intro.html">服务器简介</a></li>
+        <li><a href="announcements.html">全部公告</a></li>
+        <li><a href="gallery.html" class="active">画廊</a></li>
+      </ul>
+    </nav>
 
-    <div class="divider"></div> <!-- 通用横条 -->
+    <div class="divider"></div>
   </header>
 
   <div class="hide-ani">
-  <div class="gallery">
-    <h2>画廊</h2>
-    <div class="section fade-in"> <!-- 添加过渡动画类 -->
-      <h3>页面建设中</h3>
-      <img src="image1.jpg" alt="Screenshot 1">
-      <img src="image2.jpg" alt="Screenshot 2">
-      <img src="image3.jpg" alt="Screenshot 3">
+    <!-- 画廊容器 -->
+    <div class="gallery-container">
+      <div class="gallery">
+        <div class="gallery-images">
+          <img src="images/gallery3.jpg" alt="Screenshot 3">
+          <img src="images/gallery3.jpg" alt="Screenshot 3">
+          <img src="images/gallery3.jpg" alt="Screenshot 3">
+          <img src="images/gallery3.jpg" alt="Screenshot 3">
+          <img src="images/gallery3.jpg" alt="Screenshot 3">
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
   <footer>
-    <div class="divider"></div> <!-- 通用横条 -->
+    <div class="divider"></div>
     <div class="footer-container">
       <div class="footer-item">
         <a href="https://mcsm.arucraftr.org/" target="_blank" class="server-panel-btn">MCSM</a>
@@ -50,6 +54,8 @@
       &copy; 2024 aruCraftR. All rights reserved.
     </div>
   </footer>
+
   <script src="script.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>
