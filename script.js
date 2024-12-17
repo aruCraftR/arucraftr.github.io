@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (targetPath.startsWith("/")) {
                 targetPath = targetPath;
             } else {
-                targetPath = window.location.pathname.replace(/\/[^\/]+$/, "/") + targetPath;
+                targetPath = window.location.pathname.replace(/\/[^\/]+$/, "/") + targetPage;
             }
 
             // 如果点击的链接目标是当前页面，则阻止跳转
@@ -37,15 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(`Target Page: ${targetPage}`); // 调试输出目标页面
             e.preventDefault(); // 防止直接跳转
 
-            // 给整个页面添加动画（不影响 logo）
+            // 给整个页面添加动画（不影响 logo 和页脚）
             document.querySelector('.logo').classList.add('no-fade');  // 为 logo 添加 'no-fade' 类，避免动画
-            document.querySelector('.hide-ani').classList.add("hide");
+            document.querySelector('.hide-ani').classList.add("hide"); // 为页面元素添加隐藏动画
+
+            // 为页脚添加消失效果
+            const footer = document.querySelector('footer');
+            if (footer) {
+                footer.classList.add('hide');
+            }
+
+            // 统一的渐入渐出效果
+            document.body.classList.add('fade-out'); // 在点击链接时触发 fade-out 效果
 
             // 等待动画结束后跳转
             setTimeout(() => {
                 console.log(`Redirecting to ${targetPage}`); // 调试输出跳转目标
                 window.location.href = targetPage; // 跳转到目标页面
-            }, 200); // 与 CSS 动画持续时间相同
+            }, 500); // 等待渐出动画完成后跳转（500ms）
         });
     });
 });
