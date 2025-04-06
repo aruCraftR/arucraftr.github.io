@@ -2395,15 +2395,16 @@ a {
 }
 
 .button.big {
+  border: 2px solid var(--main-color);
   color: var(--main-color);
-  border-width: 2px;
-  border-color: #25d4ec;
+  background-color: #09131b59;
   border-radius: 10px;
   margin-left: 9px;
   margin-right: 9px;
   padding: 11px 26px;
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
   font-size: 16px;
+  text-decoration: none;
 }
 
 .button.big:hover {
@@ -2733,10 +2734,10 @@ a {
 }
 
 .text-block-4 {
+  color: #ffffff80;
   text-align: center;
   flex: 0 auto;
   align-self: center;
-  display: block;
 }
 
 @media screen and (max-width: 991px) {
