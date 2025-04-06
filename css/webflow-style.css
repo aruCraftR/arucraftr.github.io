@@ -2156,11 +2156,11 @@ a {
   color: #ffffff9e;
   letter-spacing: 1px;
   text-transform: uppercase;
-  mix-blend-mode: normal;
   padding: 26px 13px;
   font-size: 15px;
   font-weight: 500;
   line-height: 15px;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -2740,6 +2740,10 @@ a {
   align-self: center;
 }
 
+.navbar {
+  text-align: right;
+}
+
 @media screen and (max-width: 991px) {
   .nav-menu {
     background-color: #000000d9;
@@ -2750,10 +2754,9 @@ a {
 
   .nav-link {
     text-align: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: 21px;
-    line-height: 27px;
+    padding: 26px 12px;
+    font-size: 15px;
+    line-height: 15px;
   }
 
   .menu-button {
@@ -2792,6 +2795,11 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  .nav-link {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
   .main-heading {
     font-size: 61px;
   }
@@ -2834,6 +2842,11 @@ a {
 }
 
 @media screen and (max-width: 479px) {
+  .nav-link {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
   .main-heading {
     font-size: 39px;
     line-height: 52px;
